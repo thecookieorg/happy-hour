@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   devise_for :restaurants
   devise_for :users
-  get 'pages/home'
+  resources :after_signup
 
   get 'pages/about'
+
+  root 'pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160414174915) do
+ActiveRecord::Schema.define(version: 20160416160509) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -49,6 +49,9 @@ ActiveRecord::Schema.define(version: 20160414174915) do
     t.integer  "age"
     t.string   "interest"
     t.string   "location"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "instagram"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -1,0 +1,7 @@
+<%= simple_form_for @user, url: wizard_path, method: :put do |f| %>
+  <%=  f.input :facebook  %>
+  <%=  f.input :twitter  %>
+  <%=  f.input :instagram  %>
+
+  <%= f.submit "Next" %>
+<% end %>
