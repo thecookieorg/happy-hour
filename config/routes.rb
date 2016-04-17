@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
+  
+
   devise_for :restaurants
-  devise_for :users
+  # devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   resources :after_signup
 
   get 'pages/about'
+  get 'user_dashboards/index'
+  
+  scope :users do
+    root :to => 'user_dashboards#index', :as => :user_root
+  end
 
   root 'pages#home'
 

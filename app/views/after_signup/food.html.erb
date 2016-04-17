@@ -1,1 +1,7 @@
-food.html.erb
+<%= simple_form_for @user, url: wizard_path, method: :put do |f| %>
+  <%=  f.input :favourite_restaurant  %>
+  <%=  f.input :favourite_food  %>
+  <%=  f.input :how_often_do_you_order_food_online  %>
+
+  <%= f.submit "Save" %>
+<% end %>
